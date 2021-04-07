@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- FONTS -->
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap"
+      rel="stylesheet">
+   <!-- STYLES -->
+   <link rel="stylesheet" href="css/normalize.css">
+   <link rel="stylesheet" href="css/style.css">
+   <title>ToDo App</title>
+</head>
+
+<body>
+
+   <div class="container">
+      <!-- ========== MODAL ========== -->
+      <section class="modal">
+         <div class="modal-top">
+            <div class="modal-top__info">
+               <div class="modal-top__info--arrowLeft">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                     class="bi bi-arrow-left" viewBox="0 0 16 16">
+                     <path fill-rule="evenodd"
+                        d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
+                  </svg>
+               </div>
+               <div class="modal-top__info--descr">Add your task</div>
+               <div class="modal-top__info--service">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                     class="bi bi-sliders" viewBox="0 0 16 16">
+                     <path fill-rule="evenodd"
+                        d="M11.5 2a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM9.05 3a2.5 2.5 0 0 1 4.9 0H16v1h-2.05a2.5 2.5 0 0 1-4.9 0H0V3h9.05zM4.5 7a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM2.05 8a2.5 2.5 0 0 1 4.9 0H16v1H6.95a2.5 2.5 0 0 1-4.9 0H0V8h2.05zm9.45 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm-2.45 1a2.5 2.5 0 0 1 4.9 0H16v1h-2.05a2.5 2.5 0 0 1-4.9 0H0v-1h9.05z" />
+                  </svg>
+               </div>
+            </div>
+            <div class="modal-top__icon">BUSINESS</div>
+         </div>
+         <div class="modal-content">
+            <form class="form-modal">
+               <select name="input-select" class="input-select" id="select">
+                  <option class="select-item" id="business" value="BUSINESS">Business</option>
+                  <option class="select-item" id="chat" value="CHAT">Chat</option>
+                  <option class="select-item" id="check" value="CHECK">Check</option>
+                  <option class="select-item" id="music" value="MUSIC">Music</option>
+                  <option class="select-item" id="phone" value="PHONE">Phone</option>
+                  <option class="select-item" id="restaurant" value="RESTAURANT">Restaurant</option>
+                  <option class="select-item" id="shopping" value="SHOPPING">Shopping</option>
+                  <option class="select-item" id="sport" value="SPORT">Sport</option>
+                  <option class="select-item" id="other" value="OTHER">Other</option>
+               </select>
+               <input type="text" class="form-input" id="input-descr" placeholder="Description">
+               <input type="text" class="form-input" id="input-exp" placeholder="Expanding">
+
+               <button class="btn-form__modal">Add your task</button>
+            </form>
+         </div>
+      </section>
+
+      <!-- ========== HEADER ========== -->
+
+      <header class="header">
+         <div class="header-wrapper">
+            <div class="header-wrapper--cover"></div>
+         </div>
+         <div class="header-left">
+            <div class="header-left__burger">
+               <div class="header-left__burger--line"></div>
+               <div class="header-left__burger--line"></div>
+               <div class="header-left__burger--line"></div>
+            </div>
+            <div class="header-left__title">My <br>Tasks</div>
+            <div class="header-left__date">Mar 26, 2021</div>
+         </div>
+         <div class="header-right">
+            <div class="header-right__wrapper"></div>
+            <div class="header-right__tasks">
+               <div class="header-right__tasks--left">0</div>
+               <div class="header-right__tasks--right">tasks</div>
+            </div>
+            <!-- <div class="header-right__chart">65% <span>done</span></div> -->
+         </div>
+      </header>
+
+      <!-- ========== MAIN CONTENT ========== -->
+
+      <main class="content">
+         <div class="content-wrapper">
+            <div class="inbox">inbox</div>
+
+            <!-- Заглушка -->
+            <div class="tasks-located">
+               Your tasks will be located here
+            </div>
+
+            <ul class="content-list"></ul>
+         </div>
+
+         <div class="content-completed">
+            Add your task
+            <button class="btn-add">
+               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus"
+                  viewBox="0 0 16 16">
+                  <path
+                     d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+               </svg>
+            </button>
+         </div>
+
+      </main>
+
+      <!-- ========== CONTENT COMPLETED ========== -->
+
+
+
+
+
+
+   </div>
+
+   <!-- SCRIPTS -->
+   <script src="js/app.js"></script>
+</body>
+
+</html>
