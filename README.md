@@ -1,2 +1,4 @@
- https://zibinsky.github.io/ToDo-App/
+#ToDoApp
+Приложение доступно по адресу:
+https://zibinsky.github.io/ToDo-App/
  
